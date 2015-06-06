@@ -1,0 +1,135 @@
+@(anuncios: List[Anuncio])
+
+@import helper._
+ 
+@main("CMP Music"){
+  <style>
+.searchButton{
+font:bold 15px Tahoma, Geneva, sans-serif;
+font-style:normal;
+color:#ffffff;
+background:#f26e40;
+border:0px solid #ffffff;
+text-shadow:0px -1px 1px #222222;
+box-shadow:2px 2px 5px #000000;
+-moz-box-shadow:2px 2px 5px #000000;
+-webkit-box-shadow:2px 2px 5px #000000;
+border-radius:10px 10px 10px 10px;
+-moz-border-radius:10px 10px 10px 10px;
+-webkit-border-radius:10px 10px 10px 10px;
+width:57px;
+padding:9px 120px;
+cursor:pointer;
+margin:0 auto;
+}
+.i2Style:active{
+cursor:pointer;
+position:relative;
+top:2px;
+}
+#textdescricao {
+   overflow: hidden;
+   text-overflow: ellipsis;
+   display: -webkit-box;
+   line-height: 16px;     /* fallback */
+   max-height: 32px;      /* fallback */
+   -webkit-line-clamp: 2; /* number of lines to show */
+   -webkit-box-orient: vertical;
+}
+.input-search{
+  width:300px;
+
+}
+
+    
+
+  </style>
+  <div class="container">
+        @helper.form(action=routes.Application.buscar()) {
+        <div class="sidebar">
+                <div class="insideSidebar">
+              
+                  
+                    
+              
+                  <form role="form" >
+                            <div class="form-group" >
+            
+                    
+                          
+
+                              <h3>Encontrar anúncios</h3>
+                              <p>
+                              
+                              <input class="input-search" name="key" type="text" placeholder="Palavra-chave, instrumento, estilo musical, endereço">
+                              </p>
+
+                             
+                            </div>
+
+                            <div style="text-align: left; margin-left: 80px;">
+                                    <label for="option-one" class="pure-checkbox">
+                                        <input  name="banda" id="option-one" type="checkbox" value="Tocar em banda">
+                                        Toca em banda
+                                    </label><br>
+
+                                    <label  for="option-one" class="pure-checkbox">
+                                        <input name="ocasional" id="option-one" type="checkbox" value="Tocar ocasionalmente">
+                                        Toca ocasionalmente
+                                    </label><br>
+
+                            </div>
+                                
+                            
+                            <br>
+                            <button class="searchButton" >Buscar</button>
+
+                   
+                    
+             
+               
+                    
+                    </form>
+              </div> <!--END #insideBar -->
+
+
+          </div><!--END #sideBar -->
+          
+
+        
+    
+  }
+     
+       
+            
+  
+  @if(anuncios.isEmpty){
+        
+      <h2>Nenhum anúncio encontrado</h2>
+  } else {
+
+        @for(anuncio <- anuncios){
+          
+          <div class="boxes">
+            <div class="insideBox">
+              <a style="font-size:30px; color: red;" href="@routes.Application.showAnuncio(anuncio.getId)">@anuncio.getTitulo</a>
+              <p><span style="font-size:12px; color: #000;">@anuncio.getDate</span>
+              <p><span style="font-size:12px;">@anuncio.getDescricao</span>
+              <p><span style="font-size:12px;"><b>Instrumentos: </b>@anuncio.getInstrumentos</span>
+              <p><span style="font-size:16px;"><b>Desejo : </b>@anuncio.getTipo</span>
+
+
+              
+              
+                  
+              
+              
+              
+            </div><!--insidebox-->
+          </div><!--boxes-->
+       }
+    
+  }
+  </div><!--container-->  
+     
+}

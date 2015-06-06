@@ -1,0 +1,89 @@
+@(anuncios: List[Anuncio])
+ 
+@main("Lista de Anuncios"){
+  
+  <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/bootstrap.min.css")">
+  <style type="text/css">
+    body{background: #fff url("@routes.Assets.at("images/background.png")");} 
+    .container{width:1100px; height: auto; margin: 0 auto; margin-top: 50px;}
+    .header{ height: 150px; background: #d2d2d2;}
+    .insideHeader{margin: 0 auto; width:1100px; height: 150px;}
+    .bar{height: 40px; background: #323436;}
+    .boxes{width:640px; height: 150px; background: #fff url("@routes.Assets.at("images/fundobox.png")") repeat-x; border: 1px solid #ccc; margin-bottom: 15px; float: left; border-radius: 10px;}
+    .insideBox{width:620px; height: 130px; margin: 0 auto; padding-top:10px; }
+    .sidebar{width:400px; float: right; height: 500px; background: #fff url("@routes.Assets.at("images/fundobox.png")") repeat-x; border: 1px solid #ccc; border-radius: 10px;}
+    .clear{clear: both;}
+    .logo{width:500px; height: 150px; margin-bottom: 15px; float: left; margin-left: 10px; margin-top: 30px;}
+    .button_p{width:226px; float: right; height: auto; margin-top: 17px; margin-right: 17px; margin-top: 35px;}
+
+    .publishButton{
+    font:bold 15px Tahoma, Geneva, sans-serif;
+    font-style:normal;
+    color:#ffffff;
+    background:#f26e40;
+    border:0px solid #ffffff;
+    text-shadow:0px -1px 1px #222222;
+    box-shadow:2px 2px 5px #000000;
+    -moz-box-shadow:2px 2px 5px #000000;
+    -webkit-box-shadow:2px 2px 5px #000000;
+    border-radius:10px 10px 10px 10px;
+    -moz-border-radius:10px 10px 10px 10px;
+    -webkit-border-radius:10px 10px 10px 10px;
+    width:226px;
+    padding:20px 43px;
+    cursor:pointer;
+    margin:0 auto;
+    }
+    .publishButton:active{
+    cursor:pointer;
+    position:relative;
+    top:2px;
+    }
+    </style>
+    <div class="bar"></div>
+
+    <div class="header">
+      <div class="insideHeader"> 
+        <div class="logo">
+              <h1>Classificado de Anúncios</h1>
+          </div>
+              
+          <div class="button_p">
+              <button class="publishButton" href="@routes.Application.formularioNovoAnuncio"> Criar Anúncio</button>
+          </div>
+      </div>
+    </div>
+    
+
+   
+  <div class="container">
+
+    <div class="sidebar">
+      
+    </div>
+
+      @if(anuncios.isEmpty){
+        <h2>Não há anúncios cadastrados</h2>
+      } else {
+
+        @for(anuncio <- anuncios){
+          
+          <div class="boxes">
+            <div class="insideBox">
+              <span style="font-size:20px; color: red;">@anuncio.getTitulo</span>
+              <p><span style="font-size:12px; color: #000;">@anuncio.getData</span>
+              <p><span style="font-size:12px;">@anuncio.getDescricao</span>
+            </div><!--insidebox-->
+          </div><!--boxes-->
+
+        
+
+        }
+    
+
+    
+      }
+  </div><!--container-->  
+  
+  <a href="@routes.Application.formularioNovoAnuncio">Novo anuncio</a>
+}

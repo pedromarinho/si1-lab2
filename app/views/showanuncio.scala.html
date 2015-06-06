@@ -1,0 +1,108 @@
+@(message: String)(anuncio: Anuncio)
+@main("Lista de Anuncios"){
+
+  @if(!message.isEmpty()) {
+                    <script>
+
+                    
+                    alert("@message");
+
+
+                    </script>
+  }
+  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+  
+      <script type="text/javascript">
+
+      var geocoder = new google.maps.Geocoder();
+      var address = "@anuncio.getEndereco";
+
+      geocoder.geocode( { 'address': address}, function(results, status) {
+
+        if (status == google.maps.GeocoderStatus.OK) {
+          var latitude = results[0].geometry.location.lat();
+          var longitude = results[0].geometry.location.lng();
+
+          //initialize(latitude.substring(1, 4), longitude.substring(1, 4));
+
+          var resLat = "" + latitude;
+          var resLon = "" + longitude;
+          if(resLat.substring(1, 2) === "."){
+            resLat = resLat.substring(0, 12);
+          }
+          if(resLat.substring(2, 3) === "."){
+            resLat = resLat.substring(0, 13);
+          }
+          if(resLon.substring(3, 4) === "."){
+            resLon = resLon.substring(0, 14);
+          }
+          //alert(resLat +","+ resLon);
+          //initialize(resLat, resLon);
+          var map;
+          var mapOptions = {
+              zoom: 15,
+              center: new google.maps.LatLng(resLat, resLon)
+            };
+            map = new google.maps.Map(document.getElementById('googleMap'),
+                mapOptions);
+          
+
+          google.maps.event.addDomListener(window, 'load', initialize);
+        } 
+      }); 
+  </script>
+  
+    
+
+   
+  <div class="container">
+      <div class="sidebar" style="width:400px;height:400px;">
+        <div id="googleMap" style="width:400px;height:400px;margin: 0 auto;border-radius:10px;"></div>
+      </div>
+
+      <div class="boxes" style="height:400px;">
+        <div class="insideBox">
+          <span style="font-size:20px; color: red;">@anuncio.getTitulo</span>
+          <p><span style="font-size:12px; color: #000;">@anuncio.getDate</span>
+          <p><span style="font-size:12px;">@anuncio.getDescricao</span>
+           <p><span style="font-size:12px;"><b>Instrumentos: </b>@anuncio.getInstrumentos</span>
+            <p><span style="font-size:12px;"><b>Estilos musicais que gosta: </b>@anuncio.getEstilosQueGosta</span>
+             <p><span style="font-size:12px;"><b>Estilos musicais que não gosta: </b>@anuncio.getEstilosQueNaoGosta</span>
+             <p><span style="font-size:12px;"><b>Endereco: </b>@anuncio.getEndereco</span>
+             <p><span style="font-size:12px;"><b>Contato: </b>@anuncio.getEmail</span>
+             <p><span style="font-size:12px;">@anuncio.getFacebook</span>
+          
+            @helper.form(action=routes.Application.deletarAnuncio(anuncio.getId)) {
+            <div class="row">
+
+                 <div  id="idDelete" "four columns">
+                                    
+                    <input id="codigo" class="u-full-width" type="text" placeholder="" name="idDelete" value="">
+                    <input class="button-primary" type="submit" value="Deletar anúncio" id="delAnuncio">
+                    
+                </div>
+                    </div>
+     
+
+                    <script>
+                        $( "#codigo" ).hide();
+                        function finalizarAnuncio(){
+                            
+                            var id = prompt("Digite o id do anúncio");
+
+                            if (id != null) {
+                                $( "#codigo" ).value = id;
+                                $( "#buttonFinalize" ).hide();
+                                $( "#idDelete" ).append('<input class="button-primary" type="submit" value="Deletar anúncio" id="delAnuncio">');
+                                //document.getElementById("demo").innerHTML =
+                                //"Hello " + person + "! How are you today?";
+                            }
+                        }
+                        
+
+                    </script>
+                }
+        </div><!--insidebox-->
+      </div><!--boxes-->
+  </div><!--container-->  
+}

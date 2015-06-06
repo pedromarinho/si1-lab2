@@ -1,0 +1,30 @@
+[0m[[0mdebug[0m] [0m[0m
+[0m[[0mdebug[0m] [0mInitial source changes: [0m
+[0m[[0mdebug[0m] [0m	removed:Set()[0m
+[0m[[0mdebug[0m] [0m	added: Set(/home/pedro/si1/play-bd-e-testes/test/unidade/AnuncioTest.java, /home/pedro/si1/play-bd-e-testes/test/funcional/IndexRouteTest.java, /home/pedro/si1/play-bd-e-testes/test/base/AbstractTest.java, /home/pedro/si1/play-bd-e-testes/test/funcional/ApplicationControllerTest.java, /home/pedro/si1/play-bd-e-testes/test/funcional/IndexViewTest.java)[0m
+[0m[[0mdebug[0m] [0m	modified: Set()[0m
+[0m[[0mdebug[0m] [0mRemoved products: Set()[0m
+[0m[[0mdebug[0m] [0mModified external sources: Set()[0m
+[0m[[0mdebug[0m] [0mModified binary dependencies: Set()[0m
+[0m[[0mdebug[0m] [0mInitial directly invalidated sources: Set(/home/pedro/si1/play-bd-e-testes/test/unidade/AnuncioTest.java, /home/pedro/si1/play-bd-e-testes/test/funcional/IndexRouteTest.java, /home/pedro/si1/play-bd-e-testes/test/base/AbstractTest.java, /home/pedro/si1/play-bd-e-testes/test/funcional/ApplicationControllerTest.java, /home/pedro/si1/play-bd-e-testes/test/funcional/IndexViewTest.java)[0m
+[0m[[0mdebug[0m] [0m[0m
+[0m[[0mdebug[0m] [0mSources indirectly invalidated by:[0m
+[0m[[0mdebug[0m] [0m	product: Set()[0m
+[0m[[0mdebug[0m] [0m	binary dep: Set()[0m
+[0m[[0mdebug[0m] [0m	external source: Set()[0m
+[0m[[0mdebug[0m] [0mAll initially invalidated sources: Set(/home/pedro/si1/play-bd-e-testes/test/unidade/AnuncioTest.java, /home/pedro/si1/play-bd-e-testes/test/funcional/IndexRouteTest.java, /home/pedro/si1/play-bd-e-testes/test/base/AbstractTest.java, /home/pedro/si1/play-bd-e-testes/test/funcional/ApplicationControllerTest.java, /home/pedro/si1/play-bd-e-testes/test/funcional/IndexViewTest.java)[0m
+[0m[[0mdebug[0m] [0mRecompiling all 5 sources: invalidated sources (5) exceeded 50.0% of all sources[0m
+[0m[[0minfo[0m] [0mCompiling 5 Java sources to /home/pedro/si1/play-bd-e-testes/target/scala-2.10/test-classes...[0m
+[0m[[0mdebug[0m] [0mAttempting to call javac directly...[0m
+[0m[[0mdebug[0m] [0mcom.sun.tools.javac.Main not found with appropriate method signature; forking javac instead[0m
+[0m[[0mdebug[0m] [0mForking javac: javac @/tmp/sbt_d0b98faa/argfile[0m
+[0m[[33mwarn[0m] [0mPicked up JAVA_TOOL_OPTIONS: -javaagent:/usr/share/java/jayatanaag.jar [0m
+[0m[[0mdebug[0m] [0mjavac returned exit code: 0[0m
+[0m[[0mdebug[0m] [0mJava compilation took 1.60743267 s[0m
+[0m[[0mdebug[0m] [0mJava analysis took 0.28207334 s[0m
+[0m[[0mdebug[0m] [0mInvalidated by transitive public inheritance: Set(/home/pedro/si1/play-bd-e-testes/test/unidade/AnuncioTest.java, /home/pedro/si1/play-bd-e-testes/test/funcional/IndexRouteTest.java, /home/pedro/si1/play-bd-e-testes/test/base/AbstractTest.java, /home/pedro/si1/play-bd-e-testes/test/funcional/ApplicationControllerTest.java, /home/pedro/si1/play-bd-e-testes/test/funcional/IndexViewTest.java)[0m
+[0m[[0mdebug[0m] [0mInvalidated by direct dependency: Set(/home/pedro/si1/play-bd-e-testes/test/unidade/AnuncioTest.java, /home/pedro/si1/play-bd-e-testes/test/funcional/ApplicationControllerTest.java, /home/pedro/si1/play-bd-e-testes/test/funcional/IndexRouteTest.java)[0m
+[0m[[0mdebug[0m] [0mNew invalidations:[0m
+[0m[[0mdebug[0m] [0m	Set()[0m
+[0m[[0mdebug[0m] [0mPreviously invalidated, but (transitively) depend on new invalidations:[0m
+[0m[[0mdebug[0m] [0m	Set()[0m

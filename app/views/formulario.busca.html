@@ -1,0 +1,70 @@
+@(formAnuncio: Form[Anuncio])
+@import helper._
+ 
+@index("Buscar Anuncio") {
+  @helper.form(routes.Application.buscar) {
+
+  	
+  	<div class="sidebar">
+		<div class="insideSidebar">
+		  	<div id="signup-form">
+		        
+		        <!--BEGIN #subscribe-inner -->
+		        <div id="signup-inner">
+		        
+		        	
+		    
+		    		<form id="send" action="">
+			
+			   			
+				            
+
+				                <h3>Encontrar anuncios</h3>
+				                <p>
+				                
+				                <input name="titulo" type="text" placeholder="Palavra-chave">
+				                </p>
+
+				                <p>
+
+				                <label for="option-one" class="pure-checkbox">
+				                    <input name="tipo" id="option-one" type="checkbox" value="">
+				                    Toca em banda
+				                </label><br>
+
+				                <label for="option-one" class="pure-checkbox">
+				                    <input name="tipo" id="option-one" type="checkbox" value="">
+				                    Toca ocasionalmente
+				                </label><br>
+
+				                
+				                <input name="instrumento" type="text" placeholder="Instrumentos ex: violão, bateria,...">
+				                       
+				                <p>
+				                
+				                <input name="estiloQueGosta" type="text"  placeholder="Estilos musicais ex: forró, sertanejo,...">
+				                      
+				                </p>
+				                <p>
+				               
+				                <input name="endereco" type="text" placeholder="Cidade">
+				                </p>
+				             
+				              <button class="i2Style" >Buscar</button>
+
+				     
+			   			
+			 
+			   
+		    			<input type="submit" value="Criar">
+		    		</form>
+		    	</div>
+
+
+		    </div>
+		</div>
+        
+        <!--END #signup-inner -->
+    </div>
+  }
+}

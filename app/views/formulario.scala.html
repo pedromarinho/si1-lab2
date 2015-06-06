@@ -1,0 +1,143 @@
+@(message: String)(formAnuncio: Form[Anuncio])
+@import helper._
+ 
+@main("Cadastrar Anuncio") {
+  @helper.form(routes.Application.novoAnuncio) {
+
+  @if(!message.isEmpty()) {
+                    <script>
+
+                    
+                    alert("@message");
+
+
+                    </script>
+  }
+
+  	<link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/style.css")">
+    <style>
+        body{background: #fff url("@routes.Assets.at("images/background.png")");} 
+        #signup-form{border-radius: 10px;}
+    </style>
+
+  	<div id="signup-form">
+        
+        <!--BEGIN #subscribe-inner -->
+        <div id="signup-inner">
+        
+        	<div class="clearfix" id="header">
+        	
+        		<img id="signup-icon" src="@routes.Assets.at("images/music.png")" alt="">
+        
+                <h1>Anúncio de contato</h1>
+
+            
+            </div>
+    
+    		<form id="send" action="">
+	
+	   			<p>
+                <label>Identificador(necessário para se finalizar o anúncio) *</label>
+                <input name="idDelete" type="text" class="form-control" required>
+                </p>
+
+	   			<p>
+                <label>Título *</label>
+                <input name="titulo" type="text" class="form-control" required>
+                </p>
+	  			<p>
+                <label>Descrição do anúncio *</label>
+                <textarea name="descricao" cols="30" rows="10" class="form-control" required></textarea>
+
+                </p>
+
+                <p>
+               	<label>Forma que deseja tocar *</label><br>
+                   
+                   <div style="position: static; left: 0px;">
+	                   <input type="radio" name="tipo" value="Tocar em banda" checked>Tocar em banda
+						<br>
+						<input type="radio" name="tipo" value="Tocar ocasionalmente">Tocar ocasionalmente
+
+						
+					</div>
+                    
+                </p>
+                <div id="instruments">
+                     
+                    <label>Quais instrumentos você toca? *</label>
+                    
+                    <input name="instrumentos" type="text" class="form-control" placeholder="violão, bateria, guitarra,..." required>
+                    
+                    
+                    
+                    
+                    
+                <p>
+                </div>
+                <div id="likeStyle">
+               
+                    <label>Quais os estilos musicais você gosta de tocar? *</label>
+                    
+                    <input name="estilosQueGosta" type="text" class="form-control" placeholder="forró, sertanejo, rock,..." required>
+                    
+                    
+                </p>
+
+                </div>
+
+                <div id="noLikeStyle">
+               
+                    <label>Quais os estilos musicais você NÃO gosta de tocar? *</label>
+                    
+                    <input name="estilosQueNaoGosta" type="text" class="form-control" placeholder="forró, sertanejo, rock,..."
+                    required>
+                    
+                </p>
+                </div>
+
+                <label>Email *</label>
+                <input name="email" type="text" class="form-control" required>
+                </p>
+                
+                <p>
+                <label>Facebook</label>
+                <input name="facebook" class="form-control" type="text">
+                </p>
+                
+                
+                
+                <p>
+                <label>Endereço *</label>
+                <input name="endereco" type="text" class="form-control" required>
+                </p>
+
+	   			<script type="text/javascript">
+
+                	function addElement(name, id){
+                		//alert($( id ).text());
+      //           		var theDiv = document.getElementById(id);
+						// var content = document.createTextNode('<input name="'+name+'" type="text" class="form-control" required><br><br>');
+						// theDiv.appendChild(content);
+                		$( id ).append('<input name="'+name+'" type="text" class="form-control" required><br><br>');
+                     //document.getElementById(id).innerHTML += '<input name="'+name+'" type="text" class="form-control" required><br><br>';
+                }
+                        
+
+            	</script>
+	 
+	   
+    			<input type="submit" value="Criar">
+    		</form>
+    		<div>
+				<p>* Obrigatório<br>
+				</p>
+			</div>
+
+
+        </div>
+        
+        <!--END #signup-inner -->
+    </div>
+  }
+}

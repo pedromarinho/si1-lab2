@@ -1,0 +1,547 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuite hostname="pc-MOBILE" name="funcional.ApplicationControllerTest" tests="3" errors="0" failures="3" time="0.023">
+        <properties>
+      <property name="jline.esc.timeout" value="0"/><property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/><property name="sun.boot.library.path" value="/usr/lib/jvm/java-8-oracle/jre/lib/amd64"/><property name="java.vm.version" value="25.45-b02"/><property name="activator.home" value="/home/pedro/play/activator-1.3.2-minimal"/><property name="java.vm.vendor" value="Oracle Corporation"/><property name="java.vendor.url" value="http://java.oracle.com/"/><property name="path.separator" value=":"/><property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/><property name="file.encoding.pkg" value="sun.io"/><property name="user.country" value="BR"/><property name="sun.java.launcher" value="SUN_STANDARD"/><property name="sun.os.patch.level" value="unknown"/><property name="java.vm.specification.name" value="Java Virtual Machine Specification"/><property name="user.dir" value="/home/pedro/si1/play-bd-e-testes"/><property name="java.runtime.version" value="1.8.0_45-b14"/><property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/><property name="java.endorsed.dirs" value="/usr/lib/jvm/java-8-oracle/jre/lib/endorsed"/><property name="os.arch" value="amd64"/><property name="java.io.tmpdir" value="/tmp"/><property name="line.separator" value="
+"/><property name="java.vm.specification.vendor" value="Oracle Corporation"/><property name="os.name" value="Linux"/><property name="sun.jnu.encoding" value="UTF-8"/><property name="java.library.path" value="/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib"/><property name="java.specification.name" value="Java Platform API Specification"/><property name="java.class.version" value="52.0"/><property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/><property name="os.version" value="3.19.0-18-generic"/><property name="user.home" value="/home/pedro"/><property name="user.timezone" value="America/Fortaleza"/><property name="java.awt.printerjob" value="sun.print.PSPrinterJob"/><property name="file.encoding" value="UTF-8"/><property name="java.specification.version" value="1.8"/><property name="java.class.path" value="/home/pedro/play/activator-1.3.2-minimal/activator-launch-1.3.2.jar:/usr/share/java/jayatanaag.jar"/><property name="user.name" value="pedro"/><property name="jline.shutdownhook" value="false"/><property name="java.vm.specification.version" value="1.8"/><property name="sun.java.command" value="/home/pedro/play/activator-1.3.2-minimal/activator-launch-1.3.2.jar clean compile test run"/><property name="java.home" value="/usr/lib/jvm/java-8-oracle/jre"/><property name="sun.arch.data.model" value="64"/><property name="user.language" value="pt"/><property name="java.specification.vendor" value="Oracle Corporation"/><property name="awt.toolkit" value="sun.awt.X11.XToolkit"/><property name="java.vm.info" value="mixed mode"/><property name="java.version" value="1.8.0_45"/><property name="java.ext.dirs" value="/usr/lib/jvm/java-8-oracle/jre/lib/ext:/usr/java/packages/lib/ext"/><property name="sun.boot.class.path" value="/usr/lib/jvm/java-8-oracle/jre/lib/resources.jar:/usr/lib/jvm/java-8-oracle/jre/lib/rt.jar:/usr/lib/jvm/java-8-oracle/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-8-oracle/jre/lib/jsse.jar:/usr/lib/jvm/java-8-oracle/jre/lib/jce.jar:/usr/lib/jvm/java-8-oracle/jre/lib/charsets.jar:/usr/lib/jvm/java-8-oracle/jre/lib/jfr.jar:/usr/lib/jvm/java-8-oracle/jre/classes"/><property name="java.vendor" value="Oracle Corporation"/><property name="file.separator" value="/"/><property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/><property name="sun.io.unicode.encoding" value="UnicodeLittle"/><property name="sun.cpu.endian" value="little"/><property name="sun.desktop" value="gnome"/><property name="sun.cpu.isalist" value=""/>
+    </properties>
+        <testcase classname="funcional.ApplicationControllerTest" name="callIndex" time="0.0">
+      <failure message="expected:&lt;[303]&gt; but was:&lt;[200]&gt;" type="sbt.ForkMain$ForkError">
+              sbt.ForkMain$ForkError: expected:&lt;[303]&gt; but was:&lt;[200]&gt;
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at org.fest.assertions.ConstructorInvoker.newInstance(ConstructorInvoker.java:36)
+	at org.fest.assertions.ComparisonFailureFactory.newComparisonFailure(ComparisonFailureFactory.java:60)
+	at org.fest.assertions.ComparisonFailureFactory.comparisonFailure(ComparisonFailureFactory.java:46)
+	at org.fest.assertions.Fail.comparisonFailed(Fail.java:83)
+	at org.fest.assertions.Fail.failIfNotEqual(Fail.java:71)
+	at org.fest.assertions.GenericAssert.isEqualTo(GenericAssert.java:217)
+	at org.fest.assertions.IntAssert.isEqualTo(IntAssert.java:61)
+	at funcional.ApplicationControllerTest.callIndex(ApplicationControllerTest.java:38)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runners.Suite.runChild(Suite.java:127)
+	at org.junit.runners.Suite.runChild(Suite.java:26)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:160)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:138)
+	at com.novocode.junit.JUnitRunner.run(JUnitRunner.java:90)
+	at sbt.RunnerWrapper$1.runRunner2(FrameworkWrapper.java:220)
+	at sbt.RunnerWrapper$1.execute(FrameworkWrapper.java:233)
+	at sbt.ForkMain$Run.runTest(ForkMain.java:239)
+	at sbt.ForkMain$Run.runTestSafe(ForkMain.java:211)
+	at sbt.ForkMain$Run.runTests(ForkMain.java:187)
+	at sbt.ForkMain$Run.run(ForkMain.java:251)
+	at sbt.ForkMain.main(ForkMain.java:97)
+
+            </failure>
+    </testcase><testcase classname="funcional.ApplicationControllerTest" name="callAnuncios" time="0.0">
+      <failure message="&lt;'
+
+ 
+
+
+&lt;!DOCTYPE html&gt;
+
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Lista de Anuncios&lt;/title&gt;
+        &lt;link rel=&quot;stylesheet&quot; media=&quot;screen&quot; href=&quot;/assets/stylesheets/main.css&quot;&gt;
+        &lt;link rel=&quot;shortcut icon&quot; type=&quot;image/png&quot; href=&quot;/assets/images/favicon.png&quot;&gt;
+        &lt;script src=&quot;/assets/javascripts/hello.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+        &lt;script src=&quot;/assets/javascripts/jquery.min.js&quot;&gt;&lt;/script&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;link rel=&quot;stylesheet&quot; media=&quot;screen&quot; href=&quot;/assets/stylesheets/bootstrap.min.css&quot;&gt;
+          &lt;style type=&quot;text/css&quot;&gt;
+            body{background: #fff url(&quot;/assets/images/background.png&quot;);} 
+            .container{width:1100px; height: auto; margin: 0 auto; margin-top: 50px;}
+            .header{ height: 150px; background: #d2d2d2;background: #fff url(&quot;/assets/images/fundobox.png&quot;) repeat-x;}
+            .insideHeader{margin: 0 auto; width:1100px; height: 150px;}
+            .bar{height: 40px; background: #323436;}
+            .boxes{width:640px; height: 200px; background: #fff url(&quot;/assets/images/fundobox.png&quot;) repeat-x; border: 1px solid #ccc; margin-bottom: 15px; float: left; border-radius: 10px;}
+            .insideBox{width:620px; height: 130px; margin: 0 auto; padding-top:10px; }
+            .insideSidebar{width:400px; height: 300px; padding-top:10px; text-align: center;}
+            .sidebar{width:400px; float: right; height: 350px; background: #fff url(&quot;/assets/images/fundobox.png&quot;) repeat-x; border: 1px solid #ccc; border-radius: 10px;}
+            .clear{clear: both;}
+            .logo{width:500px; height: 150px; margin-bottom: 15px; float: left; margin-left: 10px; margin-top: 30px;}
+            .button_p{width:226px; float: right; height: auto; margin-top: 17px; margin-right: 17px; margin-top: 35px;}
+
+            .publishButton{
+            font:bold 15px Tahoma, Geneva, sans-serif;
+            font-style:normal;
+            color:#ffffff;
+            background:#f26e40;
+            border:0px solid #ffffff;
+            text-shadow:0px -1px 1px #222222;
+            box-shadow:2px 2px 5px #000000;
+            -moz-box-shadow:2px 2px 5px #000000;
+            -webkit-box-shadow:2px 2px 5px #000000;
+            border-radius:10px 10px 10px 10px;
+            -moz-border-radius:10px 10px 10px 10px;
+            -webkit-border-radius:10px 10px 10px 10px;
+            width:226px;
+            padding:20px 43px;
+            cursor:pointer;
+            margin:0 auto;
+            }
+            .publishButton:active{
+            cursor:pointer;
+            position:relative;
+            top:2px;
+            }
+            &lt;/style&gt;
+            &lt;div class=&quot;bar&quot;&gt;&lt;/div&gt;
+
+            &lt;div class=&quot;header&quot;&gt;
+              &lt;div class=&quot;insideHeader&quot;&gt; 
+                &lt;div class=&quot;logo&quot;&gt;
+                      &lt;h1&gt;Classificado de Anúncios&lt;/h1&gt;
+                  &lt;/div&gt;
+                      
+                  &lt;div class=&quot;button_p&quot;&gt;
+                      &lt;button class=&quot;publishButton&quot; href=&quot;/anuncio/novo&quot;&gt; Criar Anúncio&lt;/button&gt;
+                  &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+            
+            
+  &lt;style&gt;
+.searchButton{
+font:bold 15px Tahoma, Geneva, sans-serif;
+font-style:normal;
+color:#ffffff;
+background:#f26e40;
+border:0px solid #ffffff;
+text-shadow:0px -1px 1px #222222;
+box-shadow:2px 2px 5px #000000;
+-moz-box-shadow:2px 2px 5px #000000;
+-webkit-box-shadow:2px 2px 5px #000000;
+border-radius:10px 10px 10px 10px;
+-moz-border-radius:10px 10px 10px 10px;
+-webkit-border-radius:10px 10px 10px 10px;
+width:57px;
+padding:9px 120px;
+cursor:pointer;
+margin:0 auto;
+}
+.i2Style:active{
+cursor:pointer;
+position:relative;
+top:2px;
+}
+#textdescricao {
+   overflow: hidden;
+   text-overflow: ellipsis;
+   display: -webkit-box;
+   line-height: 16px;     /* fallback */
+   max-height: 32px;      /* fallback */
+   -webkit-line-clamp: 2; /* number of lines to show */
+   -webkit-box-orient: vertical;
+}
+.input-search{
+  width:300px;
+
+}
+
+    
+
+  &lt;/style&gt;
+  &lt;div class=&quot;container&quot;&gt;
+         
+
+&lt;form action=&quot;/buscar&quot; method=&quot;GET&quot; &gt;
+    
+        &lt;div class=&quot;sidebar&quot;&gt;
+                &lt;div class=&quot;insideSidebar&quot;&gt;
+              
+                  
+                    
+              
+                  &lt;form role=&quot;form&quot; &gt;
+                            &lt;div class=&quot;form-group&quot; &gt;
+            
+                    
+                          
+
+                              &lt;h3&gt;Encontrar anúncios&lt;/h3&gt;
+                              &lt;p&gt;
+                              
+                              &lt;input class=&quot;input-search&quot; name=&quot;key&quot; type=&quot;text&quot; placeholder=&quot;Palavra-chave, instrumento, estilo musical, endereço&quot;&gt;
+                              &lt;/p&gt;
+
+                             
+                            &lt;/div&gt;
+
+                            &lt;div style=&quot;text-align: left; margin-left: 80px;&quot;&gt;
+                                    &lt;label for=&quot;option-one&quot; class=&quot;pure-checkbox&quot;&gt;
+                                        &lt;input  name=&quot;banda&quot; id=&quot;option-one&quot; type=&quot;checkbox&quot; value=&quot;Tocar em banda&quot;&gt;
+                                        Toca em banda
+                                    &lt;/label&gt;&lt;br&gt;
+
+                                    &lt;label  for=&quot;option-one&quot; class=&quot;pure-checkbox&quot;&gt;
+                                        &lt;input name=&quot;ocasional&quot; id=&quot;option-one&quot; type=&quot;checkbox&quot; value=&quot;Tocar ocasionalmente&quot;&gt;
+                                        Toca ocasionalmente
+                                    &lt;/label&gt;&lt;br&gt;
+
+                            &lt;/div&gt;
+                                
+                            
+                            &lt;br&gt;
+                            &lt;button class=&quot;searchButton&quot; &gt;Buscar&lt;/button&gt;
+
+                   
+                    
+             
+               
+                    
+                    &lt;/form&gt;
+              &lt;/div&gt; &lt;!--END #insideBar --&gt;
+
+
+          &lt;/div&gt;&lt;!--END #sideBar --&gt;
+          
+
+        
+    
+  
+&lt;/form&gt;
+
+     
+       
+            
+  
+  
+        
+      &lt;h2&gt;Nenhum anúncio encontrado&lt;/h2&gt;
+  
+  &lt;/div&gt;&lt;!--container--&gt;  
+     
+
+              
+          &lt;/div&gt;&lt;!--container--&gt;  
+          
+          &lt;a href=&quot;/anuncio/novo&quot;&gt;Novo anuncio&lt;/a&gt;
+        
+        
+    &lt;/body&gt;
+&lt;/html&gt;
+'&gt; should contain the String:&lt;'0 livro(s)'&gt;" type="sbt.ForkMain$ForkError">
+              sbt.ForkMain$ForkError: &lt;'
+
+ 
+
+
+&lt;!DOCTYPE html&gt;
+
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Lista de Anuncios&lt;/title&gt;
+        &lt;link rel=&quot;stylesheet&quot; media=&quot;screen&quot; href=&quot;/assets/stylesheets/main.css&quot;&gt;
+        &lt;link rel=&quot;shortcut icon&quot; type=&quot;image/png&quot; href=&quot;/assets/images/favicon.png&quot;&gt;
+        &lt;script src=&quot;/assets/javascripts/hello.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+        &lt;script src=&quot;/assets/javascripts/jquery.min.js&quot;&gt;&lt;/script&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;link rel=&quot;stylesheet&quot; media=&quot;screen&quot; href=&quot;/assets/stylesheets/bootstrap.min.css&quot;&gt;
+          &lt;style type=&quot;text/css&quot;&gt;
+            body{background: #fff url(&quot;/assets/images/background.png&quot;);} 
+            .container{width:1100px; height: auto; margin: 0 auto; margin-top: 50px;}
+            .header{ height: 150px; background: #d2d2d2;background: #fff url(&quot;/assets/images/fundobox.png&quot;) repeat-x;}
+            .insideHeader{margin: 0 auto; width:1100px; height: 150px;}
+            .bar{height: 40px; background: #323436;}
+            .boxes{width:640px; height: 200px; background: #fff url(&quot;/assets/images/fundobox.png&quot;) repeat-x; border: 1px solid #ccc; margin-bottom: 15px; float: left; border-radius: 10px;}
+            .insideBox{width:620px; height: 130px; margin: 0 auto; padding-top:10px; }
+            .insideSidebar{width:400px; height: 300px; padding-top:10px; text-align: center;}
+            .sidebar{width:400px; float: right; height: 350px; background: #fff url(&quot;/assets/images/fundobox.png&quot;) repeat-x; border: 1px solid #ccc; border-radius: 10px;}
+            .clear{clear: both;}
+            .logo{width:500px; height: 150px; margin-bottom: 15px; float: left; margin-left: 10px; margin-top: 30px;}
+            .button_p{width:226px; float: right; height: auto; margin-top: 17px; margin-right: 17px; margin-top: 35px;}
+
+            .publishButton{
+            font:bold 15px Tahoma, Geneva, sans-serif;
+            font-style:normal;
+            color:#ffffff;
+            background:#f26e40;
+            border:0px solid #ffffff;
+            text-shadow:0px -1px 1px #222222;
+            box-shadow:2px 2px 5px #000000;
+            -moz-box-shadow:2px 2px 5px #000000;
+            -webkit-box-shadow:2px 2px 5px #000000;
+            border-radius:10px 10px 10px 10px;
+            -moz-border-radius:10px 10px 10px 10px;
+            -webkit-border-radius:10px 10px 10px 10px;
+            width:226px;
+            padding:20px 43px;
+            cursor:pointer;
+            margin:0 auto;
+            }
+            .publishButton:active{
+            cursor:pointer;
+            position:relative;
+            top:2px;
+            }
+            &lt;/style&gt;
+            &lt;div class=&quot;bar&quot;&gt;&lt;/div&gt;
+
+            &lt;div class=&quot;header&quot;&gt;
+              &lt;div class=&quot;insideHeader&quot;&gt; 
+                &lt;div class=&quot;logo&quot;&gt;
+                      &lt;h1&gt;Classificado de Anúncios&lt;/h1&gt;
+                  &lt;/div&gt;
+                      
+                  &lt;div class=&quot;button_p&quot;&gt;
+                      &lt;button class=&quot;publishButton&quot; href=&quot;/anuncio/novo&quot;&gt; Criar Anúncio&lt;/button&gt;
+                  &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+            
+            
+  &lt;style&gt;
+.searchButton{
+font:bold 15px Tahoma, Geneva, sans-serif;
+font-style:normal;
+color:#ffffff;
+background:#f26e40;
+border:0px solid #ffffff;
+text-shadow:0px -1px 1px #222222;
+box-shadow:2px 2px 5px #000000;
+-moz-box-shadow:2px 2px 5px #000000;
+-webkit-box-shadow:2px 2px 5px #000000;
+border-radius:10px 10px 10px 10px;
+-moz-border-radius:10px 10px 10px 10px;
+-webkit-border-radius:10px 10px 10px 10px;
+width:57px;
+padding:9px 120px;
+cursor:pointer;
+margin:0 auto;
+}
+.i2Style:active{
+cursor:pointer;
+position:relative;
+top:2px;
+}
+#textdescricao {
+   overflow: hidden;
+   text-overflow: ellipsis;
+   display: -webkit-box;
+   line-height: 16px;     /* fallback */
+   max-height: 32px;      /* fallback */
+   -webkit-line-clamp: 2; /* number of lines to show */
+   -webkit-box-orient: vertical;
+}
+.input-search{
+  width:300px;
+
+}
+
+    
+
+  &lt;/style&gt;
+  &lt;div class=&quot;container&quot;&gt;
+         
+
+&lt;form action=&quot;/buscar&quot; method=&quot;GET&quot; &gt;
+    
+        &lt;div class=&quot;sidebar&quot;&gt;
+                &lt;div class=&quot;insideSidebar&quot;&gt;
+              
+                  
+                    
+              
+                  &lt;form role=&quot;form&quot; &gt;
+                            &lt;div class=&quot;form-group&quot; &gt;
+            
+                    
+                          
+
+                              &lt;h3&gt;Encontrar anúncios&lt;/h3&gt;
+                              &lt;p&gt;
+                              
+                              &lt;input class=&quot;input-search&quot; name=&quot;key&quot; type=&quot;text&quot; placeholder=&quot;Palavra-chave, instrumento, estilo musical, endereço&quot;&gt;
+                              &lt;/p&gt;
+
+                             
+                            &lt;/div&gt;
+
+                            &lt;div style=&quot;text-align: left; margin-left: 80px;&quot;&gt;
+                                    &lt;label for=&quot;option-one&quot; class=&quot;pure-checkbox&quot;&gt;
+                                        &lt;input  name=&quot;banda&quot; id=&quot;option-one&quot; type=&quot;checkbox&quot; value=&quot;Tocar em banda&quot;&gt;
+                                        Toca em banda
+                                    &lt;/label&gt;&lt;br&gt;
+
+                                    &lt;label  for=&quot;option-one&quot; class=&quot;pure-checkbox&quot;&gt;
+                                        &lt;input name=&quot;ocasional&quot; id=&quot;option-one&quot; type=&quot;checkbox&quot; value=&quot;Tocar ocasionalmente&quot;&gt;
+                                        Toca ocasionalmente
+                                    &lt;/label&gt;&lt;br&gt;
+
+                            &lt;/div&gt;
+                                
+                            
+                            &lt;br&gt;
+                            &lt;button class=&quot;searchButton&quot; &gt;Buscar&lt;/button&gt;
+
+                   
+                    
+             
+               
+                    
+                    &lt;/form&gt;
+              &lt;/div&gt; &lt;!--END #insideBar --&gt;
+
+
+          &lt;/div&gt;&lt;!--END #sideBar --&gt;
+          
+
+        
+    
+  
+&lt;/form&gt;
+
+     
+       
+            
+  
+  
+        
+      &lt;h2&gt;Nenhum anúncio encontrado&lt;/h2&gt;
+  
+  &lt;/div&gt;&lt;!--container--&gt;  
+     
+
+              
+          &lt;/div&gt;&lt;!--container--&gt;  
+          
+          &lt;a href=&quot;/anuncio/novo&quot;&gt;Novo anuncio&lt;/a&gt;
+        
+        
+    &lt;/body&gt;
+&lt;/html&gt;
+'&gt; should contain the String:&lt;'0 livro(s)'&gt;
+	at org.fest.assertions.Fail.failure(Fail.java:228)
+	at org.fest.assertions.Assert.failure(Assert.java:149)
+	at org.fest.assertions.StringAssert.contains(StringAssert.java:73)
+	at funcional.ApplicationControllerTest.callAnuncios(ApplicationControllerTest.java:51)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runners.Suite.runChild(Suite.java:127)
+	at org.junit.runners.Suite.runChild(Suite.java:26)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:160)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:138)
+	at com.novocode.junit.JUnitRunner.run(JUnitRunner.java:90)
+	at sbt.RunnerWrapper$1.runRunner2(FrameworkWrapper.java:220)
+	at sbt.RunnerWrapper$1.execute(FrameworkWrapper.java:233)
+	at sbt.ForkMain$Run.runTest(ForkMain.java:239)
+	at sbt.ForkMain$Run.runTestSafe(ForkMain.java:211)
+	at sbt.ForkMain$Run.runTests(ForkMain.java:187)
+	at sbt.ForkMain$Run.run(ForkMain.java:251)
+	at sbt.ForkMain.main(ForkMain.java:97)
+
+            </failure>
+    </testcase><testcase classname="funcional.ApplicationControllerTest" name="callNewAnuncio" time="0.0">
+      <failure message="expected:&lt;'/[anuncio/novo]'&gt; but was:&lt;'/[]'&gt;" type="sbt.ForkMain$ForkError">
+              sbt.ForkMain$ForkError: expected:&lt;'/[anuncio/novo]'&gt; but was:&lt;'/[]'&gt;
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at org.fest.assertions.ConstructorInvoker.newInstance(ConstructorInvoker.java:36)
+	at org.fest.assertions.ComparisonFailureFactory.newComparisonFailure(ComparisonFailureFactory.java:60)
+	at org.fest.assertions.ComparisonFailureFactory.comparisonFailure(ComparisonFailureFactory.java:46)
+	at org.fest.assertions.Fail.comparisonFailed(Fail.java:83)
+	at org.fest.assertions.Fail.failIfNotEqual(Fail.java:71)
+	at org.fest.assertions.GenericAssert.isEqualTo(GenericAssert.java:217)
+	at funcional.ApplicationControllerTest.callNewAnuncio(ApplicationControllerTest.java:69)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runners.Suite.runChild(Suite.java:127)
+	at org.junit.runners.Suite.runChild(Suite.java:26)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:160)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:138)
+	at com.novocode.junit.JUnitRunner.run(JUnitRunner.java:90)
+	at sbt.RunnerWrapper$1.runRunner2(FrameworkWrapper.java:220)
+	at sbt.RunnerWrapper$1.execute(FrameworkWrapper.java:233)
+	at sbt.ForkMain$Run.runTest(ForkMain.java:239)
+	at sbt.ForkMain$Run.runTestSafe(ForkMain.java:211)
+	at sbt.ForkMain$Run.runTests(ForkMain.java:187)
+	at sbt.ForkMain$Run.run(ForkMain.java:251)
+	at sbt.ForkMain.main(ForkMain.java:97)
+
+            </failure>
+    </testcase>
+        <system-out>
+          
+        </system-out>
+        <system-err>
+          
+        </system-err>
+      </testsuite>
