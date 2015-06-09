@@ -1,5 +1,5 @@
 [0m[[0mdebug[0m] [0mCopy resource mappings: [0m
-[0m[[0mdebug[0m] [0m	(/home/pedro/si1/play-bd-e-testes/conf/routes,/home/pedro/si1/play-bd-e-testes/target/scala-2.10/classes/routes)[0m
-[0m[[0mdebug[0m] [0m	(/home/pedro/si1/play-bd-e-testes/conf/application.conf,/home/pedro/si1/play-bd-e-testes/target/scala-2.10/classes/application.conf)[0m
-[0m[[0mdebug[0m] [0m	(/home/pedro/si1/play-bd-e-testes/conf/META-INF,/home/pedro/si1/play-bd-e-testes/target/scala-2.10/classes/META-INF)[0m
-[0m[[0mdebug[0m] [0m	(/home/pedro/si1/play-bd-e-testes/conf/META-INF/persistence.xml,/home/pedro/si1/play-bd-e-testes/target/scala-2.10/classes/META-INF/persistence.xml)[0m
+[0m[[0mdebug[0m] [0m	(/home/pedro/SILAB2/si1-lab2/conf/routes,/home/pedro/SILAB2/si1-lab2/target/scala-2.10/classes/routes)[0m
+[0m[[0mdebug[0m] [0m	(/home/pedro/SILAB2/si1-lab2/conf/application.conf,/home/pedro/SILAB2/si1-lab2/target/scala-2.10/classes/application.conf)[0m
+[0m[[0mdebug[0m] [0m	(/home/pedro/SILAB2/si1-lab2/conf/META-INF,/home/pedro/SILAB2/si1-lab2/target/scala-2.10/classes/META-INF)[0m
+[0m[[0mdebug[0m] [0m	(/home/pedro/SILAB2/si1-lab2/conf/META-INF/persistence.xml,/home/pedro/SILAB2/si1-lab2/target/scala-2.10/classes/META-INF/persistence.xml)[0m
