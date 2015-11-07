@@ -20,19 +20,19 @@ import play.api.data.Field
 import play.mvc.Http.Context.Implicit._
 import views.html._
 /**/
-object index extends BaseScalaTemplate[play.api.templates.HtmlFormat.Appendable,Format[play.api.templates.HtmlFormat.Appendable]](play.api.templates.HtmlFormat) with play.api.templates.Template1[List[Anuncio],play.api.templates.HtmlFormat.Appendable] {
+object index extends BaseScalaTemplate[play.api.templates.HtmlFormat.Appendable,Format[play.api.templates.HtmlFormat.Appendable]](play.api.templates.HtmlFormat) with play.api.templates.Template2[Integer,List[Anuncio],play.api.templates.HtmlFormat.Appendable] {
 
     /**/
-    def apply/*1.2*/(anuncios: List[Anuncio]):play.api.templates.HtmlFormat.Appendable = {
+    def apply/*2.2*/(contAnuncios: Integer)(anuncios: List[Anuncio]):play.api.templates.HtmlFormat.Appendable = {
         _display_ {import helper._
 
 
-Seq[Any](format.raw/*1.27*/("""
+Seq[Any](format.raw/*2.50*/("""
 
-"""),format.raw/*4.1*/(""" 
-"""),_display_(Seq[Any](/*5.2*/main("CMP Music")/*5.19*/{_display_(Seq[Any](format.raw/*5.20*/("""
+"""),format.raw/*5.1*/(""" 
+"""),_display_(Seq[Any](/*6.2*/main("CMP Music")/*6.19*/{_display_(Seq[Any](format.raw/*6.20*/("""
   <style>
-.searchButton"""),format.raw/*7.14*/("""{"""),format.raw/*7.15*/("""
+.searchButton"""),format.raw/*8.14*/("""{"""),format.raw/*8.15*/("""
 font:bold 15px Tahoma, Geneva, sans-serif;
 font-style:normal;
 color:#ffffff;
@@ -49,13 +49,13 @@ width:57px;
 padding:9px 120px;
 cursor:pointer;
 margin:0 auto;
-"""),format.raw/*24.1*/("""}"""),format.raw/*24.2*/("""
-.i2Style:active"""),format.raw/*25.16*/("""{"""),format.raw/*25.17*/("""
+"""),format.raw/*25.1*/("""}"""),format.raw/*25.2*/("""
+.i2Style:active"""),format.raw/*26.16*/("""{"""),format.raw/*26.17*/("""
 cursor:pointer;
 position:relative;
 top:2px;
-"""),format.raw/*29.1*/("""}"""),format.raw/*29.2*/("""
-#textdescricao """),format.raw/*30.16*/("""{"""),format.raw/*30.17*/("""
+"""),format.raw/*30.1*/("""}"""),format.raw/*30.2*/("""
+#textdescricao """),format.raw/*31.16*/("""{"""),format.raw/*31.17*/("""
    overflow: hidden;
    text-overflow: ellipsis;
    display: -webkit-box;
@@ -63,17 +63,19 @@ top:2px;
    max-height: 32px;      /* fallback */
    -webkit-line-clamp: 2; /* number of lines to show */
    -webkit-box-orient: vertical;
-"""),format.raw/*38.1*/("""}"""),format.raw/*38.2*/("""
-.input-search"""),format.raw/*39.14*/("""{"""),format.raw/*39.15*/("""
+"""),format.raw/*39.1*/("""}"""),format.raw/*39.2*/("""
+.input-search"""),format.raw/*40.14*/("""{"""),format.raw/*40.15*/("""
   width:300px;
 
-"""),format.raw/*42.1*/("""}"""),format.raw/*42.2*/("""
+"""),format.raw/*43.1*/("""}"""),format.raw/*43.2*/("""
 
     
 
   </style>
   <div class="container">
-        """),_display_(Seq[Any](/*48.10*/helper/*48.16*/.form(action=routes.Application.buscar())/*48.57*/ {_display_(Seq[Any](format.raw/*48.59*/("""
+        <p>Músicos ajudados: """),_display_(Seq[Any](/*49.31*/contAnuncios)),format.raw/*49.43*/("""</p> 
+
+        """),_display_(Seq[Any](/*51.10*/helper/*51.16*/.form(action=routes.Application.buscar())/*51.57*/ {_display_(Seq[Any](format.raw/*51.59*/("""
         <div class="sidebar">
                 <div class="insideSidebar">
               
@@ -126,25 +128,25 @@ top:2px;
 
         
     
-  """)))})),format.raw/*101.4*/("""
+  """)))})),format.raw/*104.4*/("""
      
        
             
   
-  """),_display_(Seq[Any](/*106.4*/if(anuncios.isEmpty)/*106.24*/{_display_(Seq[Any](format.raw/*106.25*/("""
+  """),_display_(Seq[Any](/*109.4*/if(anuncios.isEmpty)/*109.24*/{_display_(Seq[Any](format.raw/*109.25*/("""
         
       <h2>Nenhum anúncio encontrado</h2>
-  """)))}/*109.5*/else/*109.10*/{_display_(Seq[Any](format.raw/*109.11*/("""
+  """)))}/*112.5*/else/*112.10*/{_display_(Seq[Any](format.raw/*112.11*/("""
 
-        """),_display_(Seq[Any](/*111.10*/for(anuncio <- anuncios) yield /*111.34*/{_display_(Seq[Any](format.raw/*111.35*/("""
+        """),_display_(Seq[Any](/*114.10*/for(anuncio <- anuncios) yield /*114.34*/{_display_(Seq[Any](format.raw/*114.35*/("""
           
           <div class="boxes">
             <div class="insideBox">
-              <a style="font-size:30px; color: red;" href=""""),_display_(Seq[Any](/*115.61*/routes/*115.67*/.Application.showAnuncio(anuncio.getId))),format.raw/*115.106*/("""">"""),_display_(Seq[Any](/*115.109*/anuncio/*115.116*/.getTitulo)),format.raw/*115.126*/("""</a>
-              <p><span style="font-size:12px; color: #000;">"""),_display_(Seq[Any](/*116.62*/anuncio/*116.69*/.getDate)),format.raw/*116.77*/("""</span>
-              <p><span style="font-size:12px;">"""),_display_(Seq[Any](/*117.49*/anuncio/*117.56*/.getDescricao)),format.raw/*117.69*/("""</span>
-              <p><span style="font-size:12px;"><b>Instrumentos: </b>"""),_display_(Seq[Any](/*118.70*/anuncio/*118.77*/.getInstrumentos)),format.raw/*118.93*/("""</span>
-              <p><span style="font-size:16px;"><b>Desejo : </b>"""),_display_(Seq[Any](/*119.65*/anuncio/*119.72*/.getTipo)),format.raw/*119.80*/("""</span>
+              <a style="font-size:30px; color: red;" href=""""),_display_(Seq[Any](/*118.61*/routes/*118.67*/.Application.showAnuncio(anuncio.getId))),format.raw/*118.106*/("""">"""),_display_(Seq[Any](/*118.109*/anuncio/*118.116*/.getTitulo)),format.raw/*118.126*/("""</a>
+              <p><span style="font-size:12px; color: #000;">"""),_display_(Seq[Any](/*119.62*/anuncio/*119.69*/.getDate)),format.raw/*119.77*/("""</span>
+              <p><span style="font-size:12px;">"""),_display_(Seq[Any](/*120.49*/anuncio/*120.56*/.getDescricao)),format.raw/*120.69*/("""</span>
+              <p><span style="font-size:12px;"><b>Instrumentos: </b>"""),_display_(Seq[Any](/*121.70*/anuncio/*121.77*/.getInstrumentos)),format.raw/*121.93*/("""</span>
+              <p><span style="font-size:16px;"><b>Desejo : </b>"""),_display_(Seq[Any](/*122.65*/anuncio/*122.72*/.getTipo)),format.raw/*122.80*/("""</span>
 
 
               
@@ -155,28 +157,28 @@ top:2px;
               
             </div><!--insidebox-->
           </div><!--boxes-->
-       """)))})),format.raw/*130.9*/("""
+       """)))})),format.raw/*133.9*/("""
     
-  """)))})),format.raw/*132.4*/("""
+  """)))})),format.raw/*135.4*/("""
   </div><!--container-->  
      
 """)))})))}
     }
     
-    def render(anuncios:List[Anuncio]): play.api.templates.HtmlFormat.Appendable = apply(anuncios)
+    def render(contAnuncios:Integer,anuncios:List[Anuncio]): play.api.templates.HtmlFormat.Appendable = apply(contAnuncios)(anuncios)
     
-    def f:((List[Anuncio]) => play.api.templates.HtmlFormat.Appendable) = (anuncios) => apply(anuncios)
+    def f:((Integer) => (List[Anuncio]) => play.api.templates.HtmlFormat.Appendable) = (contAnuncios) => (anuncios) => apply(contAnuncios)(anuncios)
     
     def ref: this.type = this
 
 }
                 /*
                     -- GENERATED --
-                    DATE: Fri Jun 05 23:44:51 BRT 2015
-                    SOURCE: /home/pedro/si1/play-bd-e-testes/app/views/index.scala.html
-                    HASH: 4cd2f5a2dd97231048b751c7af019d93a2fd41c2
-                    MATRIX: 781->1|916->26|944->45|981->48|1006->65|1044->66|1095->90|1123->91|1597->538|1625->539|1669->555|1698->556|1770->601|1798->602|1842->618|1871->619|2144->865|2172->866|2214->880|2243->881|2287->898|2315->899|2405->953|2420->959|2470->1000|2510->1002|4355->2815|4425->2849|4455->2869|4495->2870|4568->2925|4582->2930|4622->2931|4670->2942|4711->2966|4751->2967|4926->3105|4942->3111|5005->3150|5046->3153|5064->3160|5098->3170|5201->3236|5218->3243|5249->3251|5342->3307|5359->3314|5395->3327|5509->3404|5526->3411|5565->3427|5674->3499|5691->3506|5722->3514|5930->3690|5971->3699
-                    LINES: 26->1|30->1|32->4|33->5|33->5|33->5|35->7|35->7|52->24|52->24|53->25|53->25|57->29|57->29|58->30|58->30|66->38|66->38|67->39|67->39|70->42|70->42|76->48|76->48|76->48|76->48|129->101|134->106|134->106|134->106|137->109|137->109|137->109|139->111|139->111|139->111|143->115|143->115|143->115|143->115|143->115|143->115|144->116|144->116|144->116|145->117|145->117|145->117|146->118|146->118|146->118|147->119|147->119|147->119|158->130|160->132
+                    DATE: Fri Oct 30 21:31:44 BRT 2015
+                    SOURCE: /home/pedro/UFCG/SI1/activator-dist-1.3.6/lab2si/app/views/index.scala.html
+                    HASH: fd1538f8b0f8dde1dc3e8eb7d88707d7ec478a28
+                    MATRIX: 789->2|947->50|975->69|1012->72|1037->89|1075->90|1126->114|1154->115|1628->562|1656->563|1700->579|1729->580|1801->625|1829->626|1873->642|1902->643|2175->889|2203->890|2245->904|2274->905|2318->922|2346->923|2457->998|2491->1010|2543->1026|2558->1032|2608->1073|2648->1075|4493->2888|4563->2922|4593->2942|4633->2943|4706->2998|4720->3003|4760->3004|4808->3015|4849->3039|4889->3040|5064->3178|5080->3184|5143->3223|5184->3226|5202->3233|5236->3243|5339->3309|5356->3316|5387->3324|5480->3380|5497->3387|5533->3400|5647->3477|5664->3484|5703->3500|5812->3572|5829->3579|5860->3587|6068->3763|6109->3772
+                    LINES: 26->2|30->2|32->5|33->6|33->6|33->6|35->8|35->8|52->25|52->25|53->26|53->26|57->30|57->30|58->31|58->31|66->39|66->39|67->40|67->40|70->43|70->43|76->49|76->49|78->51|78->51|78->51|78->51|131->104|136->109|136->109|136->109|139->112|139->112|139->112|141->114|141->114|141->114|145->118|145->118|145->118|145->118|145->118|145->118|146->119|146->119|146->119|147->120|147->120|147->120|148->121|148->121|148->121|149->122|149->122|149->122|160->133|162->135
                     -- GENERATED --
                 */
             

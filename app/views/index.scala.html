@@ -1,4 +1,5 @@
-@(anuncios: List[Anuncio])
+
+@(contAnuncios: Integer)(anuncios: List[Anuncio])
 
 @import helper._
  
@@ -45,6 +46,8 @@ top:2px;
 
   </style>
   <div class="container">
+        <p>Músicos ajudados: @contAnuncios</p> 
+
         @helper.form(action=routes.Application.buscar()) {
         <div class="sidebar">
                 <div class="insideSidebar">

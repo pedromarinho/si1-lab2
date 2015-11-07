@@ -1,6 +1,6 @@
-// @SOURCE:/home/pedro/si1/play-bd-e-testes/conf/routes
-// @HASH:2ee7be419f25c36e3bc4832dbf140ad3280bb118
-// @DATE:Fri Jun 05 23:08:20 BRT 2015
+// @SOURCE:/home/pedro/UFCG/SI1/activator-dist-1.3.6/lab2si/conf/routes
+// @HASH:55ff369932625d0a6ea224529319e33edc322494
+// @DATE:Mon Nov 02 16:04:04 BRT 2015
 
 import Routes.{prefix => _prefix, defaultPrefix => _defaultPrefix}
 import play.core._
@@ -13,7 +13,9 @@ import play.libs.F
 import Router.queryString
 
 
-// @LINE:15
+// @LINE:17
+// @LINE:13
+// @LINE:12
 // @LINE:11
 // @LINE:10
 // @LINE:9
@@ -22,11 +24,11 @@ import Router.queryString
 // @LINE:6
 package controllers {
 
-// @LINE:15
+// @LINE:17
 class ReverseAssets {
     
 
-// @LINE:15
+// @LINE:17
 def at(file:String): Call = {
    Call("GET", _prefix + { _defaultPrefix } + "assets/" + implicitly[PathBindable[String]].unbind("file", file))
 }
@@ -35,6 +37,8 @@ def at(file:String): Call = {
 }
                           
 
+// @LINE:13
+// @LINE:12
 // @LINE:11
 // @LINE:10
 // @LINE:9
@@ -53,6 +57,18 @@ def deletarAnuncio(id:Long): Call = {
 // @LINE:10
 def showAnuncio(id:Long): Call = {
    Call("GET", _prefix + { _defaultPrefix } + "show" + queryString(List(Some(implicitly[QueryStringBindable[Long]].unbind("id", id)))))
+}
+                                                
+
+// @LINE:13
+def adicionarResposta(anuncioId:Long, duvidaId:Long): Call = {
+   Call("POST", _prefix + { _defaultPrefix } + "show/duvida" + queryString(List(Some(implicitly[QueryStringBindable[Long]].unbind("anuncioId", anuncioId)), Some(implicitly[QueryStringBindable[Long]].unbind("duvidaId", duvidaId)))))
+}
+                                                
+
+// @LINE:12
+def adicionarPergunta(id:Long): Call = {
+   Call("POST", _prefix + { _defaultPrefix } + "show" + queryString(List(Some(implicitly[QueryStringBindable[Long]].unbind("id", id)))))
 }
                                                 
 
@@ -86,7 +102,9 @@ def index(): Call = {
                   
 
 
-// @LINE:15
+// @LINE:17
+// @LINE:13
+// @LINE:12
 // @LINE:11
 // @LINE:10
 // @LINE:9
@@ -95,11 +113,11 @@ def index(): Call = {
 // @LINE:6
 package controllers.javascript {
 
-// @LINE:15
+// @LINE:17
 class ReverseAssets {
     
 
-// @LINE:15
+// @LINE:17
 def at : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Assets.at",
    """
@@ -113,6 +131,8 @@ def at : JavascriptReverseRoute = JavascriptReverseRoute(
 }
               
 
+// @LINE:13
+// @LINE:12
 // @LINE:11
 // @LINE:10
 // @LINE:9
@@ -139,6 +159,28 @@ def showAnuncio : JavascriptReverseRoute = JavascriptReverseRoute(
    """
       function(id) {
       return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "show" + _qS([(""" + implicitly[QueryStringBindable[Long]].javascriptUnbind + """)("id", id)])})
+      }
+   """
+)
+                        
+
+// @LINE:13
+def adicionarResposta : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.Application.adicionarResposta",
+   """
+      function(anuncioId,duvidaId) {
+      return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "show/duvida" + _qS([(""" + implicitly[QueryStringBindable[Long]].javascriptUnbind + """)("anuncioId", anuncioId), (""" + implicitly[QueryStringBindable[Long]].javascriptUnbind + """)("duvidaId", duvidaId)])})
+      }
+   """
+)
+                        
+
+// @LINE:12
+def adicionarPergunta : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.Application.adicionarPergunta",
+   """
+      function(id) {
+      return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "show" + _qS([(""" + implicitly[QueryStringBindable[Long]].javascriptUnbind + """)("id", id)])})
       }
    """
 )
@@ -194,7 +236,9 @@ def index : JavascriptReverseRoute = JavascriptReverseRoute(
         
 
 
-// @LINE:15
+// @LINE:17
+// @LINE:13
+// @LINE:12
 // @LINE:11
 // @LINE:10
 // @LINE:9
@@ -204,11 +248,11 @@ def index : JavascriptReverseRoute = JavascriptReverseRoute(
 package controllers.ref {
 
 
-// @LINE:15
+// @LINE:17
 class ReverseAssets {
     
 
-// @LINE:15
+// @LINE:17
 def at(path:String, file:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Assets.at(path, file), HandlerDef(this, "controllers.Assets", "at", Seq(classOf[String], classOf[String]), "GET", """ Map static resources from the /public folder to the /assets URL path""", _prefix + """assets/$file<.+>""")
 )
@@ -217,6 +261,8 @@ def at(path:String, file:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.
 }
                           
 
+// @LINE:13
+// @LINE:12
 // @LINE:11
 // @LINE:10
 // @LINE:9
@@ -235,6 +281,18 @@ def deletarAnuncio(id:Long): play.api.mvc.HandlerRef[_] = new play.api.mvc.Handl
 // @LINE:10
 def showAnuncio(id:Long): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Application.showAnuncio(id), HandlerDef(this, "controllers.Application", "showAnuncio", Seq(classOf[Long]), "GET", """""", _prefix + """show""")
+)
+                      
+
+// @LINE:13
+def adicionarResposta(anuncioId:Long, duvidaId:Long): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.Application.adicionarResposta(anuncioId, duvidaId), HandlerDef(this, "controllers.Application", "adicionarResposta", Seq(classOf[Long], classOf[Long]), "POST", """""", _prefix + """show/duvida""")
+)
+                      
+
+// @LINE:12
+def adicionarPergunta(id:Long): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.Application.adicionarPergunta(id), HandlerDef(this, "controllers.Application", "adicionarPergunta", Seq(classOf[Long]), "POST", """""", _prefix + """show""")
 )
                       
 

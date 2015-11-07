@@ -38,8 +38,8 @@ Seq[Any]()}
 }
                 /*
                     -- GENERATED --
-                    DATE: Fri Jun 05 23:08:22 BRT 2015
-                    SOURCE: /home/pedro/si1/play-bd-e-testes/app/views/anuncios.scala.html
+                    DATE: Tue Oct 27 22:36:19 BRT 2015
+                    SOURCE: /home/pedro/UFCG/SI1/activator-dist-1.3.6/lab2si/app/views/anuncios.scala.html
                     HASH: c7efc0f75c87094f54f4173904bb22e85df9d1e0
                     MATRIX: 
                     LINES: 

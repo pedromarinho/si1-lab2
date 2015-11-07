@@ -9,6 +9,8 @@ POST    /anuncio/novo             controllers.Application.novoAnuncio()
 GET     /buscar                          controllers.Application.buscar()
 GET     /show                          controllers.Application.showAnuncio(id: Long)
 POST     /delete                          controllers.Application.deletarAnuncio(id: Long)
+POST     /show                          controllers.Application.adicionarPergunta(id: Long)
+POST     /show/duvida                          controllers.Application.adicionarResposta(anuncioId: Long, duvidaId: Long)
 
 
 # Map static resources from the /public folder to the /assets URL path

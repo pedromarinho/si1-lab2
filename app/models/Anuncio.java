@@ -1,13 +1,20 @@
 package models;
 
 import java.text.DateFormat;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
@@ -21,6 +28,10 @@ public class Anuncio {
 	private Long id;
 	private String idDelete, titulo, descricao, instrumentos, estilosQueGosta,
 			estilosQueNaoGosta, tipo, email, facebook, endereco, date;
+	
+	@OneToMany(cascade=CascadeType.ALL, fetch=FetchType.EAGER)
+    @JoinColumn(name="ANUNCIO_ID")
+	private List<Duvida> duvidas;
 
 	public Anuncio() {
 	}
@@ -40,6 +51,7 @@ public class Anuncio {
 		this.facebook = facebook;
 		this.endereco = endereco;
 		date = data;
+		duvidas = new ArrayList<Duvida>();
 	}
 
 	public String getIdDelete() {
@@ -52,10 +64,6 @@ public class Anuncio {
 
 	public Long getId() {
 		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
 	}
 
 	public String getTitulo() {
@@ -137,6 +145,18 @@ public class Anuncio {
 
 	public void setDate(String date) {
 		this.date = date;
+	}
+	
+	public List<Duvida> getDuvidas() {
+		return duvidas;
+	}
+	
+	public void adicionarDuvida(Duvida duvida){
+		duvidas.add(duvida);
+	}
+	
+	public void removeDuvida(Duvida duvida){
+		duvidas.remove(duvida);
 	}
 
 	@Override

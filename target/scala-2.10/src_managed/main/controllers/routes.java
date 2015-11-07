@@ -1,6 +1,6 @@
-// @SOURCE:/home/pedro/si1/play-bd-e-testes/conf/routes
-// @HASH:2ee7be419f25c36e3bc4832dbf140ad3280bb118
-// @DATE:Fri Jun 05 23:08:20 BRT 2015
+// @SOURCE:/home/pedro/UFCG/SI1/activator-dist-1.3.6/lab2si/conf/routes
+// @HASH:55ff369932625d0a6ea224529319e33edc322494
+// @DATE:Mon Nov 02 16:04:04 BRT 2015
 
 package controllers;
 

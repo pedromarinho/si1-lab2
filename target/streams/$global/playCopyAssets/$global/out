@@ -1,17 +1,19 @@
 [0m[[0mdebug[0m] [0mCopy play resource mappings: [0m
-[0m[[0mdebug[0m] [0m	(/home/pedro/SILAB2/si1-lab2/public/images/background.png,/home/pedro/SILAB2/si1-lab2/target/scala-2.10/classes/public/images/background.png)[0m
-[0m[[0mdebug[0m] [0m	(/home/pedro/SILAB2/si1-lab2/public/images/music.png,/home/pedro/SILAB2/si1-lab2/target/scala-2.10/classes/public/images/music.png)[0m
-[0m[[0mdebug[0m] [0m	(/home/pedro/SILAB2/si1-lab2/public/images/fundobox.png,/home/pedro/SILAB2/si1-lab2/target/scala-2.10/classes/public/images/fundobox.png)[0m
-[0m[[0mdebug[0m] [0m	(/home/pedro/SILAB2/si1-lab2/public/images/favicon.png,/home/pedro/SILAB2/si1-lab2/target/scala-2.10/classes/public/images/favicon.png)[0m
-[0m[[0mdebug[0m] [0m	(/home/pedro/SILAB2/si1-lab2/public/stylesheets/main.css,/home/pedro/SILAB2/si1-lab2/target/scala-2.10/classes/public/stylesheets/main.css)[0m
-[0m[[0mdebug[0m] [0m	(/home/pedro/SILAB2/si1-lab2/public/stylesheets/bootstrap.min.css,/home/pedro/SILAB2/si1-lab2/target/scala-2.10/classes/public/stylesheets/bootstrap.min.css)[0m
-[0m[[0mdebug[0m] [0m	(/home/pedro/SILAB2/si1-lab2/public/stylesheets/main.css~,/home/pedro/SILAB2/si1-lab2/target/scala-2.10/classes/public/stylesheets/main.css~)[0m
-[0m[[0mdebug[0m] [0m	(/home/pedro/SILAB2/si1-lab2/public/stylesheets/style.css,/home/pedro/SILAB2/si1-lab2/target/scala-2.10/classes/public/stylesheets/style.css)[0m
-[0m[[0mdebug[0m] [0m	(/home/pedro/SILAB2/si1-lab2/public/stylesheets/style.css~,/home/pedro/SILAB2/si1-lab2/target/scala-2.10/classes/public/stylesheets/style.css~)[0m
-[0m[[0mdebug[0m] [0m	(/home/pedro/SILAB2/si1-lab2/public/stylesheets/bootstrap.css,/home/pedro/SILAB2/si1-lab2/target/scala-2.10/classes/public/stylesheets/bootstrap.css)[0m
-[0m[[0mdebug[0m] [0m	(/home/pedro/SILAB2/si1-lab2/public/fonts/Chicken Butt.ttf,/home/pedro/SILAB2/si1-lab2/target/scala-2.10/classes/public/fonts/Chicken Butt.ttf)[0m
-[0m[[0mdebug[0m] [0m	(/home/pedro/SILAB2/si1-lab2/public/javascripts/bootstrap.min.js,/home/pedro/SILAB2/si1-lab2/target/scala-2.10/classes/public/javascripts/bootstrap.min.js)[0m
-[0m[[0mdebug[0m] [0m	(/home/pedro/SILAB2/si1-lab2/public/javascripts/jquery-1.9.0.min.js,/home/pedro/SILAB2/si1-lab2/target/scala-2.10/classes/public/javascripts/jquery-1.9.0.min.js)[0m
-[0m[[0mdebug[0m] [0m	(/home/pedro/SILAB2/si1-lab2/public/javascripts/hello.js,/home/pedro/SILAB2/si1-lab2/target/scala-2.10/classes/public/javascripts/hello.js)[0m
-[0m[[0mdebug[0m] [0m	(/home/pedro/SILAB2/si1-lab2/public/javascripts/jquery.min.js,/home/pedro/SILAB2/si1-lab2/target/scala-2.10/classes/public/javascripts/jquery.min.js)[0m
-[0m[[0mdebug[0m] [0m	(/home/pedro/SILAB2/si1-lab2/public/javascripts/bootstrap.js,/home/pedro/SILAB2/si1-lab2/target/scala-2.10/classes/public/javascripts/bootstrap.js)[0m
+[0m[[0mdebug[0m] [0m	(/home/pedro/UFCG/SI1/activator-dist-1.3.6/lab2si/public/javascripts/jquery.min.js,/home/pedro/UFCG/SI1/activator-dist-1.3.6/lab2si/target/scala-2.10/classes/public/javascripts/jquery.min.js)[0m
+[0m[[0mdebug[0m] [0m	(/home/pedro/UFCG/SI1/activator-dist-1.3.6/lab2si/public/javascripts/bootstrap.js,/home/pedro/UFCG/SI1/activator-dist-1.3.6/lab2si/target/scala-2.10/classes/public/javascripts/bootstrap.js)[0m
+[0m[[0mdebug[0m] [0m	(/home/pedro/UFCG/SI1/activator-dist-1.3.6/lab2si/public/javascripts/bootstrap.min.js,/home/pedro/UFCG/SI1/activator-dist-1.3.6/lab2si/target/scala-2.10/classes/public/javascripts/bootstrap.min.js)[0m
+[0m[[0mdebug[0m] [0m	(/home/pedro/UFCG/SI1/activator-dist-1.3.6/lab2si/public/javascripts/hello.js,/home/pedro/UFCG/SI1/activator-dist-1.3.6/lab2si/target/scala-2.10/classes/public/javascripts/hello.js)[0m
+[0m[[0mdebug[0m] [0m	(/home/pedro/UFCG/SI1/activator-dist-1.3.6/lab2si/public/javascripts/jquery-1.9.0.min.js,/home/pedro/UFCG/SI1/activator-dist-1.3.6/lab2si/target/scala-2.10/classes/public/javascripts/jquery-1.9.0.min.js)[0m
+[0m[[0mdebug[0m] [0m	(/home/pedro/UFCG/SI1/activator-dist-1.3.6/lab2si/public/images/favicon.png,/home/pedro/UFCG/SI1/activator-dist-1.3.6/lab2si/target/scala-2.10/classes/public/images/favicon.png)[0m
+[0m[[0mdebug[0m] [0m	(/home/pedro/UFCG/SI1/activator-dist-1.3.6/lab2si/public/images/rp.png,/home/pedro/UFCG/SI1/activator-dist-1.3.6/lab2si/target/scala-2.10/classes/public/images/rp.png)[0m
+[0m[[0mdebug[0m] [0m	(/home/pedro/UFCG/SI1/activator-dist-1.3.6/lab2si/public/images/pg.png,/home/pedro/UFCG/SI1/activator-dist-1.3.6/lab2si/target/scala-2.10/classes/public/images/pg.png)[0m
+[0m[[0mdebug[0m] [0m	(/home/pedro/UFCG/SI1/activator-dist-1.3.6/lab2si/public/images/fundobox.png,/home/pedro/UFCG/SI1/activator-dist-1.3.6/lab2si/target/scala-2.10/classes/public/images/fundobox.png)[0m
+[0m[[0mdebug[0m] [0m	(/home/pedro/UFCG/SI1/activator-dist-1.3.6/lab2si/public/images/music.png,/home/pedro/UFCG/SI1/activator-dist-1.3.6/lab2si/target/scala-2.10/classes/public/images/music.png)[0m
+[0m[[0mdebug[0m] [0m	(/home/pedro/UFCG/SI1/activator-dist-1.3.6/lab2si/public/images/background.png,/home/pedro/UFCG/SI1/activator-dist-1.3.6/lab2si/target/scala-2.10/classes/public/images/background.png)[0m
+[0m[[0mdebug[0m] [0m	(/home/pedro/UFCG/SI1/activator-dist-1.3.6/lab2si/public/stylesheets/style.css~,/home/pedro/UFCG/SI1/activator-dist-1.3.6/lab2si/target/scala-2.10/classes/public/stylesheets/style.css~)[0m
+[0m[[0mdebug[0m] [0m	(/home/pedro/UFCG/SI1/activator-dist-1.3.6/lab2si/public/stylesheets/bootstrap.min.css,/home/pedro/UFCG/SI1/activator-dist-1.3.6/lab2si/target/scala-2.10/classes/public/stylesheets/bootstrap.min.css)[0m
+[0m[[0mdebug[0m] [0m	(/home/pedro/UFCG/SI1/activator-dist-1.3.6/lab2si/public/stylesheets/bootstrap.css,/home/pedro/UFCG/SI1/activator-dist-1.3.6/lab2si/target/scala-2.10/classes/public/stylesheets/bootstrap.css)[0m
+[0m[[0mdebug[0m] [0m	(/home/pedro/UFCG/SI1/activator-dist-1.3.6/lab2si/public/stylesheets/style.css,/home/pedro/UFCG/SI1/activator-dist-1.3.6/lab2si/target/scala-2.10/classes/public/stylesheets/style.css)[0m
+[0m[[0mdebug[0m] [0m	(/home/pedro/UFCG/SI1/activator-dist-1.3.6/lab2si/public/stylesheets/main.css,/home/pedro/UFCG/SI1/activator-dist-1.3.6/lab2si/target/scala-2.10/classes/public/stylesheets/main.css)[0m
+[0m[[0mdebug[0m] [0m	(/home/pedro/UFCG/SI1/activator-dist-1.3.6/lab2si/public/stylesheets/main.css~,/home/pedro/UFCG/SI1/activator-dist-1.3.6/lab2si/target/scala-2.10/classes/public/stylesheets/main.css~)[0m
+[0m[[0mdebug[0m] [0m	(/home/pedro/UFCG/SI1/activator-dist-1.3.6/lab2si/public/fonts/Chicken Butt.ttf,/home/pedro/UFCG/SI1/activator-dist-1.3.6/lab2si/target/scala-2.10/classes/public/fonts/Chicken Butt.ttf)[0m

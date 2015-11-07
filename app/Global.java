@@ -3,6 +3,7 @@ import java.text.DateFormat;
 import java.util.Calendar;
 
 import models.Anuncio;
+import models.Duvida;
 import models.dao.GenericDAO;
 import play.*;
 import play.db.jpa.JPA;
@@ -20,13 +21,17 @@ public class Global extends GlobalSettings {
             	Calendar c = Calendar.getInstance();
         		c.set(2015, 4, 20);
         		String tipo = "Tocar em banda";
+        		
         		for (int i = 0; i <= 25; i++) {
-        			dao.persist(new Anuncio("iddelete" + i, "Anuncio" + i,
+        			Anuncio anuncio = new Anuncio("iddelete" + i, "Anuncio" + i,
         					"texto de descrição", "Violão, Guitarra", "samba, rock",
         					"funk", tipo, "fulano@gmail.com", "",
         					"Parque do Povo, Campina Grande", DateFormat
         							.getDateInstance(DateFormat.LONG).format(
-        									c.getTime())));
+        									c.getTime()));
+        			anuncio.adicionarDuvida(new Duvida("Ainda procura?"));
+        			anuncio.adicionarDuvida(new Duvida("Qual o interesse"));
+        			dao.persist(anuncio);
         			if ((i % 2) == 0) {
         				c.add(Calendar.DAY_OF_MONTH, 1);
         				tipo = "Tocar ocasionalmente";

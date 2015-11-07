@@ -10,6 +10,7 @@ import java.util.List;
 import java.util.Map;
 
 import models.Anuncio;
+import models.Duvida;
 import models.dao.GenericDAO;
 import play.Logger;
 import play.data.DynamicForm;
@@ -17,19 +18,19 @@ import play.data.Form;
 import play.db.jpa.Transactional;
 import play.mvc.*;
 import views.html.*;
-import views.html.showanuncio;
 
 public class Application extends Controller {
 	// static List<Anuncio> anuncios = new ArrayList();
 	private static final GenericDAO dao = new GenericDAO();
+	private static Integer contAnuncios = 15;
 
 	// static List<Anuncio> anuncios = dao.findAllByClass(Anuncio.class);
 
 	@Transactional
 	public static Result index() {
 		// povoaBd(25);
-		// apagaBd();
-		return ok(index.render(dao.findAllByClass(Anuncio.class)));
+//		 apagaBd();
+		return ok(index.render(contAnuncios, dao.findAllByClass(Anuncio.class)));
 
 	}
 
@@ -81,6 +82,15 @@ public class Application extends Controller {
 		}
 		return null;
 	}
+	
+	@Transactional
+	public static Duvida getDuvida(long id) {
+		List<Duvida> duvida = dao.findByAttributeName("Duvida", "id", id);
+		if (duvida.size() > 0) {
+			return duvida.get(0);
+		}
+		return null;
+	}
 
 	@Transactional
 	public static Result deletarAnuncio(long id) {
@@ -88,12 +98,21 @@ public class Application extends Controller {
 		List<Anuncio> anuncios = dao.findAllByClass(Anuncio.class);
 
 		Anuncio a = getAnuncio(id);
+		
+		System.out.println("id delete: " + a.getIdDelete());
+		System.out.println("form: " + dynamicForm.get("idDelete"));
 
 		if (dynamicForm.get("idDelete").equals(a.getIdDelete())) {
+			
 			dao.remove(a);
 			dao.flush();
+			if(dynamicForm.get("help").equals("sim")){
+				contAnuncios++;
+			}
+			
 			return index();
 
+		
 		}
 		return ok(showanuncio.render("Código incorreto!", a));
 
@@ -168,12 +187,45 @@ public class Application extends Controller {
 
 		}
 		Logger.info("lista criada: " + search.size());
-		return ok(index.render(search));
+		return ok(index.render(contAnuncios, search));
 	}
 
 	public static Result formularioNovoAnuncio() {
 		Form<Anuncio> form = Form.form(Anuncio.class);
 		return ok(formulario.render("", form));
+	}
+	
+	@Transactional
+	public static Result adicionarPergunta(long id){
+		DynamicForm dynamicForm = Form.form().bindFromRequest();
+		Anuncio anuncio = getAnuncio(id);
+		anuncio.adicionarDuvida(new Duvida(dynamicForm.get("pergunta")));
+		System.out.println("adicionaPergunta() " + id);
+		dao.merge(anuncio);
+//		Duvida d = getDuvida(id);
+		
+		return showAnuncio(anuncio.getId());
+		
+	}
+	
+	@Transactional
+	public static Result adicionarResposta(long anuncioId, long duvidaId){
+		DynamicForm dynamicForm = Form.form().bindFromRequest();
+		
+//		Duvida d = new Duvida(duvida.getPergunta(), dynamicForm.get("resposta"));
+//		Anuncio anuncio = getAnuncio(id);
+//		Duvida d = anuncio.getDuvidas().get(index);
+//		d.setResposta(dynamicForm.get("resposta"));
+//		anuncio.removeDuvida(anuncio.getDuvidas().get(index));
+//		anuncio.adicionarDuvida(d);
+//		dao.merge(anuncio);
+		
+		Duvida d = getDuvida(duvidaId);
+		d.setResposta(dynamicForm.get("resposta"));
+		dao.merge(d);
+		
+		return showAnuncio(anuncioId);
+		
 	}
 
 	@Transactional
